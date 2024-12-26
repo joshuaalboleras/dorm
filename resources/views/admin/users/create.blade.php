@@ -14,6 +14,10 @@
             <input type="email" name="email" id="email" class="form-control" required>
         </div>
         <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control" required>
+        </div>
+        <div class="form-group">
             <label for="role">Role</label>
             <select name="role_id" id="role" class="form-control" required>
                 <option value="">Select Role</option>

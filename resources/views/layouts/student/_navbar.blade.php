@@ -47,8 +47,8 @@
                                     </div>
                                 </div>
                                 <div class="flex-grow-1">
-                                    <h6 class="mb-0"></h6>
-                                    <small class="text-muted"></small>
+                                    <h6 class="mb-0">{{auth()->user()->name}}</h6>
+                                    <small class="text-muted">{{auth()->user()->email}}</small>
                                 </div>
                             </div>
                         </a>

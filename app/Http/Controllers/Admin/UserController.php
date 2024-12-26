@@ -34,13 +34,14 @@ class UserController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'role_id' => 'required|exists:roles,id',
+            'password'=>'required|string|min:8'
         ]);
 
         User::create([
             'name' => $request->name,
             'email' => $request->email,
             'role_id' => $request->role_id,
-            'password' => bcrypt('password'), // You can adjust this to your needs
+            'password' => bcrypt($request->password), // You can adjust this to your needs
         ]);
 
         return redirect()->route('admin.users.index')->with('success', 'User created successfully.');
